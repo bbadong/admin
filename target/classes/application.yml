@@ -44,13 +44,13 @@ external:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 
 hystrix:
   command:
     # 전역설정
     default:
-      execution.isolation.thread.timeoutInMilliseconds: 610
+      execution.isolation.thread.timeoutInMilliseconds: 2100
 ---
 
 spring:
@@ -83,10 +83,10 @@ external:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 
 hystrix:
   command:
     # 전역설정
     default:
-      execution.isolation.thread.timeoutInMilliseconds: 610
+      execution.isolation.thread.timeoutInMilliseconds: 2100
