@@ -22,7 +22,7 @@ spec:
           args:
           - /bin/sh
           - -c
-          - touch /tmp/healthy; sleep 100; rm -rf /tmp/healthy; sleep 100
+          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 100
           readinessProbe:
             httpGet:
               path: '/actuator/health'
@@ -36,7 +36,7 @@ spec:
               command:
               - cat
               - /tmp/healthy
-            initialDelaySeconds: 120
+            initialDelaySeconds: 5
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 5
