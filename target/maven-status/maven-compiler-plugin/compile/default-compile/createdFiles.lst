@@ -1,0 +1,16 @@
+hrs\AdminpageRepository.class
+hrs\AbstractEvent$1.class
+hrs\external\ReservationService.class
+hrs\ForcedCanceled.class
+hrs\AdminpageViewHandler.class
+hrs\Admin.class
+hrs\external\Reservation.class
+hrs\AdminRepository.class
+hrs\PolicyHandler.class
+hrs\Reserved.class
+hrs\AdminController.class
+hrs\config\kafka\KafkaProcessor.class
+hrs\AdminApplication.class
+hrs\AbstractEvent.class
+hrs\Adminpage.class
+hrs\ReservationConfirmed.class
