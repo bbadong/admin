@@ -19,6 +19,10 @@ spec:
           image: username/admin:latest
           ports:
             - containerPort: 8080
+          args:
+          - /bin/sh
+          - -c
+          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
           readinessProbe:
             httpGet:
               path: '/actuator/health'
@@ -28,9 +32,10 @@ spec:
             periodSeconds: 5
             failureThreshold: 10
           livenessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
             initialDelaySeconds: 120
             timeoutSeconds: 2
             periodSeconds: 5
