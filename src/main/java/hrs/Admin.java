@@ -27,6 +27,7 @@ public class Admin {
         // mappings goes here
         reservation.setId(forcedCanceled.getReservationId());
         reservation.setUpdateGubun("delete");
+        reservation.setStatus("ReservationCanceled");
 
 
         AdminApplication.applicationContext.getBean(hrs.external.ReservationService.class)
