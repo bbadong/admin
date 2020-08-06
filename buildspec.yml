@@ -85,15 +85,15 @@ phases:
                     - /bin/sh
                     - -c
                     - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 100
-                    readinessProbe:
-                      httpGet:
-                        path: /actuator/health
-                        port: 8080
-                      initialDelaySeconds: 10
+                    livenessProbe:
+                      exec:
+                        command:
+                        - cat
+                        - /tmp/healthy
+                      initialDelaySeconds: 120
                       timeoutSeconds: 2
                       periodSeconds: 5
-                      failureThreshold: 10
-
+                      failureThreshold: 5
           EOF
 cache:
   paths:
